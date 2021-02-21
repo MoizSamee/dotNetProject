@@ -1,0 +1,60 @@
+﻿@page
+@model EComm_Project.Pages.CreditCards.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditCard[0].ExpirationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditCard[0].CardHolderFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditCard[0].CardHolderLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditCard[0].CardNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditCard[0].Customer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.CreditCard) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpirationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardHolderFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardHolderLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.CustomerId)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CreditCardId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CreditCardId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CreditCardId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
