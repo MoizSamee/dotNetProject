@@ -10,51 +10,121 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CreditCard[0].ExpirationDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreditCard[0].CardHolderFirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreditCard[0].CardHolderLastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreditCard[0].CardNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreditCard[0].Customer)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.CreditCard) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExpirationDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CardHolderFirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CardHolderLastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CardNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Customer.CustomerId)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.CreditCardId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.CreditCardId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.CreditCardId">Delete</a>
-            </td>
-        </tr>
+@*<table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreditCard[0].ExpirationDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreditCard[0].CardHolderFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreditCard[0].CardHolderLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreditCard[0].CardNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreditCard[0].Customer)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CreditCard)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ExpirationDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CardHolderFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CardHolderLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CardNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Customer.CustomerId)
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.CreditCardId">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.CreditCardId">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.CreditCardId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>*@
+@if (Model.CreditCard.Any())
+{
+    <button type="button" class="btn btn-primary">Credit Card Exists</button>
+    <p>Card Details</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreditCard[0].CardHolderFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreditCard[0].CardHolderLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreditCard[0].CardNumber)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CreditCard)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CardHolderFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CardHolderLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CardNumber)
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.CreditCardId">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.CreditCardId">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.CreditCardId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
 }
-    </tbody>
-</table>
+else
+{
+    <div class="row">
+        <form method="post">
+            <div class="form-group">
+                <input type="submit" value="Add Credit Card" class="btn btn-primary" asp-page-handler="AddCreditCard" />
+            </div>
+        </form>
+    </div>
+
+
+}
+
+@*//<button type="button" class="btn btn-primary" asp-page-handler="CnfPayment">Confirm Payment</button>*@
+<div>
+
+</div>
+<div class="row">
+    <form method="post">
+        <div class="form-group">
+            <input type="submit" value="Pay" class="btn btn-primary" asp-page-handler="CnfPayment" />
+
+        </div>
+    </form>
+</div>
+

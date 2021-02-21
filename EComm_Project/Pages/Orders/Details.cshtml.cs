@@ -20,6 +20,7 @@ namespace EComm_Project.Pages.Orders
         }
 
         public Order Order { get; set; }
+        public IList<ProductOrder> ProductOrders { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,12 +31,18 @@ namespace EComm_Project.Pages.Orders
 
             Order = await _context.Order
                 .Include(o => o.Customer).FirstOrDefaultAsync(m => m.OrderId == id);
+            ProductOrders = await _context.ProductOrder
+                .Include(p => p.Order)
+                .Include(p => p.Product).ToListAsync();
+            
+
 
             if (Order == null)
             {
                 return NotFound();
             }
             return Page();
+            
         }
     }
 }

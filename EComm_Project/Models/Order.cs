@@ -17,6 +17,6 @@ namespace EComm_Project.Models
 
         public int CustomerId { get; set; }
 
-        public bool OrderStatus;
+        public bool OrderStatus { get; set; }
     }
 }

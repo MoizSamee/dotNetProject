@@ -35,7 +35,7 @@
                 @Html.DisplayFor(modelItem => item.Customer.CustomerId)
             </td>
             <td>
-                @*@Html.DisplayFor(modelItem => item.OrderStatus)*@
+                @* @Html.DisplayFor(modelItem => item.OrderStatus)*@
                 @if (item.OrderStatus)
                 {
                     <span class="badge rounded-pill bg-secondary">Closed</span>
@@ -45,7 +45,6 @@
                     <span class="badge rounded-pill bg-success">Open</span>
                 }
             </td>
-            
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.OrderId">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.OrderId">Details</a> |

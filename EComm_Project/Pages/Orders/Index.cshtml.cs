@@ -20,38 +20,18 @@ namespace EComm_Project.Pages.Orders
         }
 
         public IList<Order> Order { get;set; }
+        /*public IList<ProductOrder> ProductOrder { get; set; }*/
 
         public async Task OnGetAsync()
         {
             Order = await _context.Order
                 .Include(o => o.Customer).ToListAsync();
+            /*ProductOrder = await _context.ProductOrder
+                .Include(p => p.Order)
+                .Include(p => p.Product).ToListAsync();*/
         }
+       
 
-        /*public async Task<RedirectToPageResult> OnGetAsync()
-        {
-            Order = await _context.Order
-                .Include(o => o.Customer).ToListAsync();
-
-            Order CurrentOrder = Order.FirstOrDefault(o => o.Order_Status = false);
-
-            var currentorderexists = CurrentOrder.Order_Status;
-            
-            if (currentorderexists == false)
-            {
-                // add to existing order
-                var existingOrderId = CurrentOrder.OrderId;
-            }
-            else
-            {
-                //create a new order
-                var newOrder = new Order();
-                _context.Order.Add(newOrder);
-                _context.SaveChanges();
-            }
-
-            return RedirectToPage("/ProductOrders/Index");
-
-
-        }*/
+       
     }
 }

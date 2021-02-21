@@ -21,8 +21,13 @@ namespace EComm_Project.Pages.Customers
 
         public Customer Customer { get; set; }
 
+        public IList<Order> Orders { get; set; }
+
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            Orders = await _context.Order
+                .Include(o => o.Customer).ToListAsync();
             if (id == null)
             {
                 return NotFound();
@@ -30,11 +35,15 @@ namespace EComm_Project.Pages.Customers
 
             Customer = await _context.Customer.FirstOrDefaultAsync(m => m.CustomerId == id);
 
+
             if (Customer == null)
             {
                 return NotFound();
             }
+            
+
             return Page();
         }
     }
 }
+

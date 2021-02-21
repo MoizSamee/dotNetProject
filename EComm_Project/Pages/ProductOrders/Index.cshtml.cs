@@ -27,5 +27,7 @@ namespace EComm_Project.Pages.ProductOrders
                 .Include(p => p.Order)
                 .Include(p => p.Product).ToListAsync();
         }
+
+        
     }
 }

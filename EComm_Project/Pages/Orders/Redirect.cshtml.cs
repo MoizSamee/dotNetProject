@@ -29,35 +29,27 @@ namespace EComm_Project.Pages.Orders
                 .Include(o => o.Customer).ToListAsync();
 
             var CurrentOrder = new Order();
-            var currentorderexists = true;
-
-            try 
-            {
-                CurrentOrder = Order.FirstOrDefault(o => o.OrderStatus = false);
-                currentorderexists = CurrentOrder.OrderStatus;
-            }
-
-            catch (NullReferenceException e)
-            {
-                if (CurrentOrder == null)
-                    Console.WriteLine("IOException source: {0}", e.Source);
-                currentorderexists = true;
-            }
-
+            //var currentorderexists = true;
             var existingOrderId = 0;
 
-            if (currentorderexists == false)
+            CurrentOrder = Order.FirstOrDefault(o => o.OrderStatus == false);
+
+            if (CurrentOrder == null)
             {
-                // add to existing order
-                existingOrderId = CurrentOrder.OrderId;
+                var newOrder = new Order();
+                newOrder.Date = DateTime.Now;
+                newOrder.CustomerId = 1;
+                _context.Order.Add(newOrder);
+                _context.SaveChanges();
+                existingOrderId = newOrder.OrderId;
             }
             else
             {
-                //create a new order
-                var newOrder = new Order();
-                _context.Order.Add(newOrder);
-                _context.SaveChanges();
+                // add to existing order
+                existingOrderId = CurrentOrder.OrderId;
+
             }
+            
 
             return RedirectToPage("/ProductOrders/Create", new { orderId = existingOrderId });
 

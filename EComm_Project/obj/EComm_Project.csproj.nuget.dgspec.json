@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Moiz\\OneDrive\\Documents\\GitHub\\EComm_Project\\EComm_Project\\EComm_Project.csproj": {}
+    "C:\\Users\\Moiz\\OneDrive\\Documents\\GitHub\\EComm_Project\\dotNetProject\\EComm_Project\\EComm_Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Moiz\\OneDrive\\Documents\\GitHub\\EComm_Project\\EComm_Project\\EComm_Project.csproj": {
+    "C:\\Users\\Moiz\\OneDrive\\Documents\\GitHub\\EComm_Project\\dotNetProject\\EComm_Project\\EComm_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Moiz\\OneDrive\\Documents\\GitHub\\EComm_Project\\EComm_Project\\EComm_Project.csproj",
+        "projectUniqueName": "C:\\Users\\Moiz\\OneDrive\\Documents\\GitHub\\EComm_Project\\dotNetProject\\EComm_Project\\EComm_Project.csproj",
         "projectName": "EComm_Project",
-        "projectPath": "C:\\Users\\Moiz\\OneDrive\\Documents\\GitHub\\EComm_Project\\EComm_Project\\EComm_Project.csproj",
+        "projectPath": "C:\\Users\\Moiz\\OneDrive\\Documents\\GitHub\\EComm_Project\\dotNetProject\\EComm_Project\\EComm_Project.csproj",
         "packagesPath": "C:\\Users\\Moiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Moiz\\OneDrive\\Documents\\GitHub\\EComm_Project\\EComm_Project\\obj\\",
+        "outputPath": "C:\\Users\\Moiz\\OneDrive\\Documents\\GitHub\\EComm_Project\\dotNetProject\\EComm_Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Moiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,17 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "BootstrapNotifications": {
+              "target": "Package",
+              "version": "[0.3.2, )"
+            },
             "Gtt.Uc.EntityFramework": {
               "target": "Package",
               "version": "[1.0.1, )"
+            },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
