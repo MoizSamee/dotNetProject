@@ -92,7 +92,7 @@ namespace EComm_Project.Pages.Orders
                 return Page();
             }
 
-            return RedirectToPage("/Card/Index");
+            return RedirectToPage("/CreditCards/Index");
         }
     }
     
