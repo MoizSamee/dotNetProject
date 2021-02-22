@@ -85,13 +85,30 @@ namespace EComm_Project.Pages.Orders
             return _context.Order.Any(e => e.OrderId == id);
         }
 
-        public IActionResult OnPostMakePayment()
+        public async Task<IActionResult> OnPostMakePaymentAsync()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
+            _context.Attach(Order).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!OrderExists(Order.OrderId))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
             return RedirectToPage("/CreditCards/Index");
         }
     }

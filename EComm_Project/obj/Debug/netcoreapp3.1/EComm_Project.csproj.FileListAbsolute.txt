@@ -616,3 +616,4 @@ C:\Users\Moiz\OneDrive\Documents\GitHub\EComm_Project\dotNetProject\EComm_Projec
 C:\Users\Moiz\OneDrive\Documents\GitHub\EComm_Project\dotNetProject\EComm_Project\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
 C:\Users\Moiz\OneDrive\Documents\GitHub\EComm_Project\dotNetProject\EComm_Project\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
 C:\Users\Moiz\OneDrive\Documents\GitHub\EComm_Project\dotNetProject\EComm_Project\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Users\Moiz\OneDrive\Documents\GitHub\EComm_Project\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Orders\RedirectViewCart.cshtml.g.cs

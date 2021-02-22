@@ -19,7 +19,8 @@ namespace EComm_Project.Pages
             _logger = logger;
         }
 
-        public List<Order> Order;
+        public List<Order> Order { get; set; }
+
         public IActionResult OnPostViewCartAsync()
         {
             if (!ModelState.IsValid)
@@ -27,7 +28,8 @@ namespace EComm_Project.Pages
                 return Page();
             }
 
-            var CurrentOrder = new Order();
+           
+            /*var CurrentOrder = new Order();
             //var currentorderexists = true;
             var existingOrderId = 0;
 
@@ -35,11 +37,11 @@ namespace EComm_Project.Pages
 
             if (CurrentOrder == null)
             {
-                /*var newOrder = new Order();
+                *//*var newOrder = new Order();
                 newOrder.Date = DateTime.Now;
                 newOrder.CustomerId = 0;*/
                 /*_context.Order.Add(newOrder);
-                _context.SaveChanges();*/
+                _context.SaveChanges();*//*
                 existingOrderId = 0;
             }
             else
@@ -47,9 +49,9 @@ namespace EComm_Project.Pages
                 // add to existing order
                 existingOrderId = CurrentOrder.OrderId;
 
-            }
+            }*/
 
-            return RedirectToPage("Orders/ViewCart?id="+ existingOrderId);
+            return RedirectToPage("Orders/RedirectViewCart");
         }
         public void OnGet()
         {
