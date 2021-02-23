@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{4C5DBF71-154D-4799-ACF1-E339E5E21B5E}|Default">
+  <MonoDevelop.Ide.ItemProperties.EComm__Project PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EComm_Project/Pages/Products/Edit.cshtml">
+    <Files>
+      <File FileName="EComm_Project/Models/CreditCard.cs" Line="1" Column="1" />
+      <File FileName="EComm_Project/Pages/Products/Edit.cshtml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EComm_Project" expanded="True">
+            <Node name="EComm_Project" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="CreditCards" expanded="True" />
+                <Node name="Products" expanded="True">
+                  <Node name="Edit.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
