@@ -1,0 +1,33 @@
+﻿@page
+@model EComm_Project.Pages.LoginModel
+@{
+}
+<style>
+    .row {
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+        justify-content: center;
+    }
+</style>
+
+<div class="row">
+<img src="https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331257__340.png" alt="User" width="604" height="340" >
+</div>
+<div class="row">
+    <form method="post">
+        <div class="form-group">
+            <input type="submit" value="Login- Existing User" class="btn btn-secondary btn-lg" asp-page-handler="Login" />
+           
+        </div>
+    </form>
+</div>
+<div class="row">
+    <form method="post">
+        <div class="form-group">
+            <input type="submit" value="Create New User" class="btn btn-secondary btn-lg" asp-page-handler="CreateUser" />
+        </div>
+    </form>
+</div>

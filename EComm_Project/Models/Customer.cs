@@ -13,12 +13,12 @@ namespace EComm_Project.Models
         public int CustomerId { get; set; }
 
         [DisplayName("First Name")]
-        [Required]
+        [Required(ErrorMessage = "First Name is Required")]
         [StringLength(50)]
         public string FirstName { get; set; }
 
         [DisplayName("Last Name")]
-        [Required]
+        [Required(ErrorMessage = "Last Name is Required")]
         [StringLength(50)]
         public string LastName { get; set; }
 
@@ -34,5 +34,14 @@ namespace EComm_Project.Models
         public List<Order> Orders { get; set; }
 
         public List<CreditCard> CreditCards { get; set; }
+
+        [DisplayName("Full Name")]
+        public string FullName
+        {
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
+        }
     }
 }

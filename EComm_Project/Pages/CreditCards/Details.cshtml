@@ -17,18 +17,24 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.CreditCard.ExpirationDate)
         </dd>
-        <dt class="col-sm-2">
+        @*<dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.CreditCard.CardHolderFirstName)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.CreditCard.CardHolderFirstName)
-        </dd>
+        </dd>*@
         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CreditCard.CardHolderFullName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CreditCard.CardHolderFullName)
+        </dd>
+        @*<dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.CreditCard.CardHolderLastName)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.CreditCard.CardHolderLastName)
-        </dd>
+        </dd>*@
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.CreditCard.CardNumber)
         </dt>

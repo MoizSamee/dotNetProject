@@ -43,7 +43,7 @@ namespace EComm_Project.Pages.CreditCards
             {
                 return Page();
             }
-            TempData["notice"] = "Successfully registered";
+            TempData["notice"] = "Successfully placed your order";
             /*String Message = "Success"; */
             return RedirectToPage("/Index");
         }

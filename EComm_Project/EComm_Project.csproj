@@ -1,8 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\bkp\**" />
+    <Content Remove="Pages\bkp\**" />
+    <EmbeddedResource Remove="Pages\bkp\**" />
+    <None Remove="Pages\bkp\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BootstrapNotifications" Version="0.3.2" />
@@ -15,10 +22,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Pages\bkp\" />
   </ItemGroup>
 
 </Project>

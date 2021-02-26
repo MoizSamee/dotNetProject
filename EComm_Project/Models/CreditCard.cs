@@ -14,18 +14,18 @@ namespace EComm_Project.Models
 
         [DataType(DataType.Date)]
         [DisplayName("Expiration Date")]
-        [Required]
+        [Required(ErrorMessage = "Date is Required")]
         public DateTime ExpirationDate { get; set; }
 
         //public int Cvv { get; set; }
 
         [DisplayName("First Name")]
-        [Required]
+        [Required(ErrorMessage = "First Name is Required")]
         [StringLength(50)]
         public string CardHolderFirstName { get; set; }
 
         [DisplayName("Last Name")]
-        [Required]
+        [Required(ErrorMessage = "Last Name is Required")]
         [StringLength(50)]
         public string CardHolderLastName { get; set; }
 
@@ -38,5 +38,14 @@ namespace EComm_Project.Models
 
         [DisplayName("Customer ID")]
         public int CustomerId { get; set; }
+
+        [DisplayName("Card User Name")]
+        public string CardHolderFullName
+        {
+            get
+            {
+                return $"{CardHolderFirstName} {CardHolderLastName}";
+            }
+        }
     }
 }

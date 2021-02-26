@@ -38,8 +38,8 @@ namespace EComm_Project.Pages.Customers
 
             _context.Customer.Add(Customer);
             await _context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
+            TempData["notice"] = "Welcome" +Customer.LastName;
+            return RedirectToPage("/Index");
         }
     }
 }

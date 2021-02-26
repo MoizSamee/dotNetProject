@@ -51,7 +51,17 @@ namespace EComm_Project.Pages
 
             }*/
 
-            return RedirectToPage("Orders/RedirectViewCart");
+            return RedirectToPage("/UnderConstruction");
+        }
+
+        public IActionResult OnPostLoginAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+            
+            return RedirectToPage("/Login");
         }
         public void OnGet()
         {
