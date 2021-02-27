@@ -33,6 +33,11 @@ namespace EComm_Project.Models
 
         public List<Order> Orders { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayName("Date of Birth")]
+        [Required]
+        public DateTime DOB { get; set; }
+
         public List<CreditCard> CreditCards { get; set; }
 
         [DisplayName("Full Name")]

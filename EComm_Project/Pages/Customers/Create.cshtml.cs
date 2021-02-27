@@ -36,10 +36,32 @@ namespace EComm_Project.Pages.Customers
                 return Page();
             }
 
+            int ph_length = Customer.PhoneNumber.Length;
+
+            int birthYear = Customer.DOB.Year;
+            int lastAllowedYear = DateTime.Now.Year - 18;
+
+            if (ph_length != 10)
+            {
+                ModelState.AddModelError(key: "Customer.PhoneNumber", errorMessage: "Phone number must be 10 digits");
+
+            }
+            if (birthYear > lastAllowedYear)
+            {
+                ModelState.AddModelError(key: "Customer.DOB", errorMessage: "Must be older than 18 years");
+
+            }
+            if (!ModelState.IsValid)
+            {
+                
+                return Page();
+            }
             _context.Customer.Add(Customer);
             await _context.SaveChangesAsync();
-            TempData["notice"] = "Welcome" +Customer.LastName;
+            TempData["notice"] = "Welcome" + Customer.LastName;
             return RedirectToPage("/Index");
+
+           
         }
     }
 }

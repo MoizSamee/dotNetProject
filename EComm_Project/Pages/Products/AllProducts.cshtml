@@ -7,9 +7,9 @@
 
 <h1>AllProducts</h1>
 
-<p>
+@*<p>
     <a asp-page="Create">Create New</a>
-</p>
+</p>*@
 <table class="table">
     <thead>
         <tr>
@@ -51,27 +51,29 @@
                 @if (item.Availability)
                 {
                     <span class="badge rounded-pill bg-success">Available</span>
-                }
-                else
-                {
-                    <span class="badge rounded-pill bg-secondary">Unavailable</span>
-                }
-            </td>
-            <td>
-                <div class="row">
-                    <form method="post">
-                        <div class="form-group">
-                            <input type="submit" value="Add To Cart" class="btn btn-primary" style="float: right;" asp-page-handler="AddToCart" />
-                            
-                        </div>
-                    </form>
-                </div>
-                        @*@*<a asp-page="./Edit" asp-route-id="@item.ProductId">Edit</a> |
-                        <a asp-page="./Details" asp-route-id="@item.ProductId">Details</a> |
-                        <a asp-page="./Delete" asp-route-id="@item.ProductId">Delete</a>*@
-                @*<a asp-page="/Orders/Redirect"  class="btn btn-primary" value="Add To Cart">Add to Cart</a>*@
-            </td>
-        </tr>
+
+                <td>
+                    <div class="row">
+                        <form method="post">
+                            <div class="form-group">
+                                <input type="submit" value="Add To Cart" class="btn btn-primary" style="float: right;" asp-page-handler="AddToCart" />
+
+                            </div>
+                        </form>
+                    </div>
+                    @*@*<a asp-page="./Edit" asp-route-id="@item.ProductId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ProductId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ProductId">Delete</a>*@
+                    @*<a asp-page="/Orders/Redirect"  class="btn btn-primary" value="Add To Cart">Add to Cart</a>*@
+                </td>
+            }
+            else
+            {
+                <span class="badge rounded-pill bg-secondary">Unavailable</span>
+            }
+                </td>
+
+            </tr>
 }
     </tbody>
 </table>

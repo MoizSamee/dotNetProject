@@ -48,8 +48,29 @@ namespace EComm_Project.Pages.Customers
                 return Page();
             }
 
+
             _context.Attach(Customer).State = EntityState.Modified;
 
+            int ph_length = Customer.PhoneNumber.Length;
+
+            int birthYear = Customer.DOB.Year;
+            int lastAllowedYear = DateTime.Now.Year - 18;
+
+            if (ph_length != 10)
+            {
+                ModelState.AddModelError(key: "Customer.PhoneNumber", errorMessage: "Phone Number must be 10 digits");
+
+            }
+            if (birthYear > lastAllowedYear)
+            {
+                ModelState.AddModelError(key: "Customer.DOB", errorMessage: "Must be older than 18 years");
+
+            }
+            if (!ModelState.IsValid)
+            {
+
+                return Page();
+            }
             try
             {
                 await _context.SaveChangesAsync();

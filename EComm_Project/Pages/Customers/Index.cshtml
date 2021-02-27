@@ -28,6 +28,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Customer[0].PhoneNumber)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].DOB)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -48,6 +51,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.CustomerId">Edit</a> |

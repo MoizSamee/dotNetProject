@@ -1447,7 +1447,6 @@ C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\De
 C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Help.cshtml.g.cs
 C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
-C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Orders\CartDetails.cshtml.g.cs
 C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Orders\Create.cshtml.g.cs
 C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Orders\Delete.cshtml.g.cs
 C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Orders\Details.cshtml.g.cs
@@ -1456,7 +1455,6 @@ C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\De
 C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Orders\Index.cshtml.g.cs
 C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Orders\Redirect.cshtml.g.cs
 C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Orders\RedirectViewCart.cshtml.g.cs
-C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Orders\ViewCart.cshtml.g.cs
 C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
 C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\ProductOrders\Create.cshtml.g.cs
 C:\Users\Moiz\OneDrive\Documents\GitHub\Damon\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\ProductOrders\Delete.cshtml.g.cs

@@ -67,11 +67,11 @@
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.CreditCard[0].CardHolderFirstName)
+                    @Html.DisplayNameFor(model => model.CreditCard[0].CardHolderFullName)
                 </th>
-                <th>
+                @*<th>
                     @Html.DisplayNameFor(model => model.CreditCard[0].CardHolderLastName)
-                </th>
+                </th>*@
                 <th>
                     @Html.DisplayNameFor(model => model.CreditCard[0].CardNumber)
                 </th>
@@ -83,11 +83,11 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.CardHolderFirstName)
+                        @Html.DisplayFor(modelItem => item.CardHolderFullName)
                     </td>
-                    <td>
+                    @*<td>
                         @Html.DisplayFor(modelItem => item.CardHolderLastName)
-                    </td>
+                    </td>*@
                     <td>
                         @Html.DisplayFor(modelItem => item.CardNumber)
                     </td>
