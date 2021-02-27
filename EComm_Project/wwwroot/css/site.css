@@ -69,3 +69,22 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.zoom {
+    background-color: ghostwhite;
+    transition: transform .2s; /* Animation */
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+    .zoom:hover {
+        transform: scale(4.5); /* 450% zoom = ~680x680 */
+    }
+
+
+.aboutheadertext {
+    color: ghostwhite;
+    font-size: 16px;
+
+}
