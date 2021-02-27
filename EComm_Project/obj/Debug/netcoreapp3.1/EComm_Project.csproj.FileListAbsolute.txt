@@ -833,3 +833,4 @@ C:\Users\gunaia\OneDrive - University of Cincinnati\dotNetProject-main-2\EComm_P
 C:\Users\gunaia\OneDrive - University of Cincinnati\dotNetProject-main-2\EComm_Project\obj\Debug\netcoreapp3.1\EComm_Project.dll
 C:\Users\gunaia\OneDrive - University of Cincinnati\dotNetProject-main-2\EComm_Project\obj\Debug\netcoreapp3.1\EComm_Project.pdb
 C:\Users\gunaia\OneDrive - University of Cincinnati\dotNetProject-main-2\EComm_Project\obj\Debug\netcoreapp3.1\EComm_Project.genruntimeconfig.cache
+C:\Users\Moiz\OneDrive\Documents\GitHub\EComm_Project\dotNetProject\EComm_Project\obj\Debug\netcoreapp3.1\Razor\Pages\Index2.cshtml.g.cs
