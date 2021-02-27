@@ -3,9 +3,25 @@
 @{
 }
 <style>
-    .h1{
+
+    
+    .card {
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    }
+    .h1 {
+        
+        color:darkcyan;
         align-content:center;
-        text-align:center
+        text-align: center
+    }
+    .h5 {
+        font-size: 50px;
+        color: darkcyan;
+        align-content: center;
+        text-align: center
     }
     
 </style>
@@ -14,10 +30,35 @@
 <img src="https://image.cnbcfm.com/api/v1/image/105229432-GettyImages-664861382.jpg?v=1576703153&w=1400&h=950" alt="Girl in a jacket" width="400" height="300" >
 
 <div class="card" style="width: 18rem;">
-    <h1> </h1>
+    <h5> No of Customers </h5>
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        @*<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>*@
+        <h1 class="card-title">
+            @{
+                int i = Model.Customers.Count();
+            }@i
+        </h1>
+       
     </div>
 </div>
+<div class="card" style="width: 18rem;">
+    <h5> No of Products </h5>
+    <div class="card-body">
+        <h1 class="card-title">
+            @{
+                int j = Model.Products.Count();
+            }@j
+        </h1>
+
+    </div>
+</div>
+<span class="card" style="width: 18rem;">
+    <h5> No of Orders </h5>
+    <div class="card-body">
+        <h1 class="card-title">
+            @{
+                int k = Model.Orders.Count();
+            }@k
+        </h1>
+
+    </div>
+</span>

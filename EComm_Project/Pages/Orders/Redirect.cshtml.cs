@@ -23,8 +23,10 @@ namespace EComm_Project.Pages.Orders
         public IList<Order> Order { get;set; }
 
        
-        public async Task<RedirectToPageResult> OnGetAsync()
+        public async Task<RedirectToPageResult> OnGetAsync(int? ProductId )
         {
+            
+            
             Order = await _context.Order
                 .Include(o => o.Customer).ToListAsync();
 
@@ -51,7 +53,7 @@ namespace EComm_Project.Pages.Orders
             }
             
 
-            return RedirectToPage("/ProductOrders/Create", new { orderId = existingOrderId });
+            return RedirectToPage("/ProductOrders/Create", new { orderId = existingOrderId, ProductId = ProductId});
 
 
         }

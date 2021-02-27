@@ -29,28 +29,6 @@ namespace EComm_Project.Pages
             }
 
            
-            /*var CurrentOrder = new Order();
-            //var currentorderexists = true;
-            var existingOrderId = 0;
-
-            CurrentOrder = Order.FirstOrDefault(o => o.OrderStatus == false);
-
-            if (CurrentOrder == null)
-            {
-                *//*var newOrder = new Order();
-                newOrder.Date = DateTime.Now;
-                newOrder.CustomerId = 0;*/
-                /*_context.Order.Add(newOrder);
-                _context.SaveChanges();*//*
-                existingOrderId = 0;
-            }
-            else
-            {
-                // add to existing order
-                existingOrderId = CurrentOrder.OrderId;
-
-            }*/
-
             return RedirectToPage("/UnderConstruction");
         }
 
@@ -82,6 +60,19 @@ namespace EComm_Project.Pages
             Orders = await _context.Orders.ToListAsync();*/
 
             return RedirectToPage("Orders/Redirect" );
+        }
+
+        public IActionResult OnPostOrderAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            /*var viewOrder = new Order();
+            Orders = await _context.Orders.ToListAsync();*/
+
+            return RedirectToPage("Products/AllProducts");
         }
     }
 }

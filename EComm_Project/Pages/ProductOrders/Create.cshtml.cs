@@ -20,7 +20,7 @@ namespace EComm_Project.Pages.ProductOrders
             _context = context;
         }
 
-        public IActionResult OnGet(int? OrderId)
+        public IActionResult OnGet(int? OrderId, int? ProductId)
         {
             //var OrderPrice_List = _context.Product.ToLookup(x => x.ProductId);
             //var newProduct = _context.Product.FirstOrDefaultAsync(m => m.ProductId == ProductId);
@@ -28,7 +28,7 @@ namespace EComm_Project.Pages.ProductOrders
             /*  ViewData["OrderPrice"]= newProduct.Price*/
             //ViewData["OrderId"] = new SelectList(_context.Order, "OrderId", "OrderId");
             ViewData["OrderId"] = new SelectList(_context.Order, "OrderId", "OrderId",OrderId);
-            ViewData["ProductId"] = new SelectList(_context.Product, "ProductId", "ProductId");
+            ViewData["ProductId"] = new SelectList(_context.Product, "ProductId", "ProductId",ProductId);
             return Page();
         }
 

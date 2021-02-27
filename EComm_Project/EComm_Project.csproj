@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BootstrapNotifications" Version="0.3.2" />
     <PackageReference Include="Gtt.Uc.EntityFramework" Version="1.0.1" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />

@@ -12,6 +12,19 @@
         padding-bottom: 15px;
     }
 
+    .btn-xl {
+        justify-content: center;
+        text-align: Center;
+        font-size: 20px;
+        border-radius: 10px;
+        width: 100%;
+        background-color: darkcyan;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    }
+
     .Login-Btn {
         justify-content: right;
         text-align: right;
@@ -92,7 +105,7 @@ else
     </div>
 </div>
 
-<div class="row">
+@*<div class="row">
     <form method="post">
         <div class="form-group">
             <input type="submit" value="Add To Cart" class="btn btn-primary" style="float: right;" asp-page-handler="AddToCart" />
@@ -100,7 +113,7 @@ else
         </div>
     </form>
 </div>
-
+*@
 @*<div class="row">
     <form method="post">
         <div class="form-group">
@@ -108,7 +121,24 @@ else
         </div>
     </form>
 </div>*@
+<br />
+<div class="row2">
+    <form method="post">
+        <div class="form-group">
+            <input type="submit" value="Order Here" class="btn btn-default btn-xl" asp-page-handler="Order" />
 
+        </div>
+    </form>
+</div>
+
+<div class="row2">
+    <form method="post">
+        <div class="form-group">
+            <input type="submit" value="View Cart" class="btn btn-default btn-xl" asp-page-handler="ViewCart" />
+
+        </div>
+    </form>
+</div>
 
 <div class="row">
 
@@ -119,11 +149,7 @@ else
                 <h5 class="card-title">Vintage 92' <i>"Reapeatabulls"</i> Shirt</h5>
                 <p class="card-text">Product ID: 1  |  $45   <br>  Size: Large </p>
             </div>
-            <form method="post">
-                <div class="form-group">
-                    <input type="submit" value="Add To Cart" class="btn btn-primary" asp-page-handler="AddToCart" />
-                </div>
-            </form>
+           
         </div>
 
     </div>
