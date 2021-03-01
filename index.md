@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
- <a href="~/Pages/Index">Application</a> 
+ <a href="~/Pages/Index.cshtml">Application</a> 
 
 You can use the [editor on GitHub](https://github.com/MoizSamee/dotNetProject/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
